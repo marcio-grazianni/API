@@ -44,46 +44,6 @@ class CardController extends Controller
         $card = Card::create($request->validated());
         return response($card);
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param Card $card
-     * @return Response
-     */
-    public function show(Card $card): Response
-    {
-        return response($card);
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param UpdateCardRequest $request
-     * @param Card $card
-     * @return Response
-     */
-    public function update(UpdateCardRequest $request, Card $card)
-    {
-        $card->update($request->validated());
-        return response($card);
-    }
-
-    public function bulkUpdate(BulkCardUpdateRequest $request): Response
-    {
-        $cards = $request->validated()['cards'];
-        foreach ($cards as $card) {
-            Card::findOrFail($card['id'])->update($card);
-        }
-        return \response()->noContent();
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param Card $card
-     * @return Response
-     */
     public function destroy(Card $card): Response
     {
         $card->delete();

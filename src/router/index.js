@@ -23,9 +23,7 @@ const router = new Router({
 /**
  * Before each route update
  */
-router.beforeEach((to, from, next) => {
-  return next()
-})
+
 
 /**
  * After each route update

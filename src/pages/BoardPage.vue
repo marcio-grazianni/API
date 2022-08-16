@@ -103,28 +103,7 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-    <v-dialog v-model="deleteDialog" max-width="290">
-      <v-card>
-        <v-card-title class="headline">Delete</v-card-title>
-        <v-card-text>Do you really want to delete?</v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn @click="deleteDialog = false">Cancel</v-btn>
-          <v-btn color="error" @click="deleteCard()">Delete</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-    <v-dialog v-model="deleteColumnDialog" max-width="290">
-      <v-card>
-        <v-card-title class="headline">Delete</v-card-title>
-        <v-card-text>Do you really want to delete?</v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn @click="deleteColumnDialog = false">Cancel</v-btn>
-          <v-btn color="error" @click="deleteColumn()">Delete</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
+
   </div>
 </template>
 
